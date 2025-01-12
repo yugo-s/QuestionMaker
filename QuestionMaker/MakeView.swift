@@ -19,7 +19,10 @@ struct ShareView: View {
             
             VStack {
                 Spacer()
+                
+                
                 Color.gray
+                    
                     .frame(width:330,height:200)
                     .cornerRadius(50)
                 
@@ -30,7 +33,7 @@ struct ShareView: View {
                     .overlay(Text("問題の画像を貼り付け")
                         .font(.system(size: 35))
                         .foregroundStyle(.blue))
-                Spacer(minLength:50)
+                Spacer()
 
                 Color.gray
                     .frame(width:330,height:200)
@@ -44,9 +47,7 @@ struct ShareView: View {
                              
                         .font(.system(size: 35))
                         .foregroundStyle(.blue))
-                Spacer(minLength:50)
-                Spacer(minLength:50)
-                Spacer(minLength:50)
+                Spacer()
                 
                 
             }
