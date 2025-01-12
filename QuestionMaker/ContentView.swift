@@ -12,11 +12,13 @@ struct ContentView: View {
         TabView{
             TestView()
                 .tabItem{
-                    Image(systemName:"square.and.arrow.up")
+                    Label("share", systemImage:"square.and.arrow.up")
+                    
                 }
                 .tag(1)
-            ShareView()
-                .tabItem{Image(systemName: "square.and.pencil")}
+            MakeView()
+                .tabItem{
+                    Label("make", systemImage: "square.and.pencil")}
                 .tag(2)
             
         }

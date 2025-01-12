@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ShareView: View {
+struct MakeView: View {
     var body: some View {
         
         ZStack{
@@ -56,5 +56,5 @@ struct ShareView: View {
 }
 
 #Preview {
-    ShareView()
+    MakeView()
 }
