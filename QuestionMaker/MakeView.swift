@@ -8,45 +8,64 @@
 import SwiftUI
 
 struct MakeView: View {
+    @State var scrWidth = UIScreen.main.bounds.width
+    @State var scrHeight = UIScreen.main.bounds.height
     var body: some View {
         
         ZStack{
 //            Color.customColor1
             
             Color(red: 230/255, green: 255/255, blue: 230/255)
-                .ignoresSafeArea()
+//                .ignoresSafeArea()
             
             
             VStack {
                 Spacer()
                 
-                
-                Color.gray
+                HStack{
+                    Spacer()
+                    Button(action:{
+                        print("1")
+                    }){
+                        
+                    }
+                    Color.customColor4
                     
-                    .frame(width:330,height:200)
-                    .cornerRadius(50)
+                        
+                        .frame(width:scrWidth * 0.6,height:200)
+                        .cornerRadius(50)
+                    
+                        .overlay(Image(systemName:"photo")
+//                            .resizable()
+                            .renderingMode(.template)
+                            .font(.system(size: 120))
+                            .foregroundColor(Color(uiColor: UIColor(red: 1, green: 1, blue: 1, alpha: 0.9)))
+                            // 画像サイズをフレームに合わせる
+                            .scaledToFit()                  //縦横比を維持しながらフレームに収める
+                            .frame(width: 150, height: 150))
+                    Spacer()
+                }
+                Text("画像アップロード")
+                    .font(.system(size:20))
+                    .foregroundStyle(Color.customColor3)
                 
-                    .overlay(Image(systemName:"photo")
-                        .resizable()                    // 画像サイズをフレームに合わせる
-                        .scaledToFit()                  //縦横比を維持しながらフレームに収める
-                        .frame(width: 150, height: 150))
-                    .overlay(Text("問題の画像を貼り付け")
-                        .font(.system(size: 35))
-                        .foregroundStyle(.blue))
                 Spacer()
 
-                Color.gray
-                    .frame(width:330,height:200)
+                Color.customColor4
+                    .frame(width:scrWidth*0.6,height:200)
                     .cornerRadius(50)
                 
                     .overlay(Image(systemName:"questionmark.text.page")
-                        .resizable()                    // 画像サイズをフレームに合わせる
+                        
+                        .renderingMode(.template)
+                        .font(.system(size: 130))
+                        .foregroundColor(Color(uiColor: UIColor(red: 1, green: 1, blue: 1, alpha: 0.9)))
                         .scaledToFit()                  //縦横比を維持しながらフレームに収める
                         .frame(width: 150, height: 150))
-                    .overlay(Text("AIが類題を作成")
-                             
-                        .font(.system(size: 35))
-                        .foregroundStyle(.blue))
+                    
+                Text("類題を作成")
+                    .font(.system(size:20))
+                    .foregroundStyle(Color.customColor3)
                 Spacer()
                 
                 
