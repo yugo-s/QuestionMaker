@@ -7,12 +7,9 @@
 
 import SwiftUI
 
-struct Extension: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
-
-#Preview {
-    Extension()
+extension Color{
+    static let costomColor1 = Color("CustomColor1")
+    static let costomColor2 = Color("CustomColor2")
+    static let costomColor3 = Color("CustomColor3")
+    static let costomColor4 = Color("CustomColor4")
 }
